@@ -3,7 +3,7 @@ const counter = document.querySelector('.counter');
 const finalMessage = document.querySelector('.final');
 const replay = document.querySelector('#replay');
 
-requestAnimation();
+// Remove the unnecessary call to requestAnimationFrame()
 
 function resetDOM() {
     counter.classList.remove('hide');
@@ -12,11 +12,11 @@ function resetDOM() {
     nums.forEach((num) => {
         num.classList.value = '';
     });
-    nums[0].classList.add('in');  // Fixing the typo here
+    nums[0].classList.add('in');
 }
 
 function runAnimation() {
-    nums.forEach((num, idx) => {  // Fixing the typo here
+    nums.forEach((num, idx) => {
         const nextToLast = nums.length - 1;
 
         num.addEventListener('animationend', (e) => {
